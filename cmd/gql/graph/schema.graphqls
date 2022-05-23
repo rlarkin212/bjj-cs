@@ -1,0 +1,34 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Instructional {
+  id: String!
+  title: String!
+  searchTitle: String!
+  presenter: String!
+  cover: String!
+  part: Int!
+  downloadUrl: String!
+  watchUrl: String!
+  createdAt: Int!
+}
+
+input NewInstructional {
+  title: String!
+  presenter: String!
+  cover: String = ""
+  part: Int!
+  url: String!
+}
+
+type Query {
+  instructionals: [Instructional!]!
+  instructional(id: String!): Instructional!
+  count: Int!
+}
+
+type Mutation {
+  createInstructional(input: NewInstructional!): Instructional!
+}
+

@@ -1,0 +1,15 @@
+{
+  version : "v1",
+  rest : {
+    port : "5000"
+  },
+  gql : {
+    port : "8080"
+  },
+  mongo : {
+    url : "${URL}",
+    db : "${DB}",
+    collection: "${COLLECTION}",
+    timeout : "${TIMEOUT}"
+  }
+}
